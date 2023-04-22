@@ -98,32 +98,37 @@
             System.out.print(elemento + " ");
             
         }
-        /*
-         * per ogni elemento dell'arrayList ciclo
-         */
-        for (int i = 0; i < statiArrayList.size(); i++) {
-            //inizializzo minimo (valore che passerò ad output) con il primo elemento dell'arrayList contentente gli stati
-            int minimo = statiArrayList.get(i); 
-            /*
-             * ciclo per trovare il minimo valore dell'arrayList
-             */
-            for (int j = 0; j < statiArrayList.size(); j++) {
-                if(minimo > statiArrayList.get(j)){
-                    minimo = statiArrayList.get(j);
-                    System.out.println(minimo);
-                    statiArrayList.remove(j);
+        // /*
+        //  * per ogni elemento dell'arrayList ciclo
+        //  */
+        // for (int i = 0; i < statiArrayList.size(); i++) {
+        //     //inizializzo minimo (valore che passerò ad output) con il primo elemento dell'arrayList contentente gli stati
+        //     int minimo = statiArrayList.get(i); 
+        //     /*
+        //      * ciclo per trovare il minimo valore dell'arrayList
+        //      */
+        //     for (int j = 0; j < statiArrayList.size(); j++) {
+        //         if(minimo > statiArrayList.get(j)){
+        //             minimo = statiArrayList.get(j);
+        //             System.out.println(minimo);
+        //             statiArrayList.remove(j);
 
-                }
+        //         }
 
    
-            }
-            output[i] = statiNums.get(minimo);
+        //     }
+        //     output[i] = statiNums.get(minimo);
 
-            for (Integer elemento : output) {
-                System.out.println(elemento);
-                
-            }
+           
+        // }
+        int i = 0;
+        for (Integer integer : statiArrayList) {
+            output[i] =  statiNums.get(integer);
+            i++;
         }
-
+        for (Integer elemento : output) {
+            System.out.print(elemento + " ");
+            
+        }
         return output;
     }
