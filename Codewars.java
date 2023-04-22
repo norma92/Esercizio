@@ -1,4 +1,4 @@
-//status([6, 9, 3, 8, 2, 3, 1]) = [6, 3, 2, 1, 9, 3, 8]
+    //status([6, 9, 3, 8, 2, 3, 1]) = [6, 3, 2, 1, 9, 3, 8]
     /*
      * 6 --> 0 + 4 = 4
      * 9 --> 1 + 6 = 7
@@ -88,6 +88,9 @@
          * e rimuovere l'elemento inserito per aggiornare il minore di volta in volta
          */
         ArrayList<Integer> statiArrayList = new ArrayList<>();
+
+        
+        //ciclo per inserire nell'arrayList ogni elemento contenuto in stati 
         for (Integer elemento : stati) {
             statiArrayList.add(elemento);
             
@@ -121,14 +124,13 @@
 
            
         // }
+        System.out.println("\nSTAMPA DEGLI ELEMENTI PASSATO AD OUTPUT");
         int i = 0;
         for (Integer integer : statiArrayList) {
+            System.out.print(statiNums.get(integer) + " ");
             output[i] =  statiNums.get(integer);
             i++;
         }
-        for (Integer elemento : output) {
-            System.out.print(elemento + " ");
-            
-        }
+  
         return output;
     }
